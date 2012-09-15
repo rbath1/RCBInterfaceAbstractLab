@@ -8,7 +8,7 @@ package lab1;
  *
  * @author rbath1
  */
-public abstract class Course {
+public abstract class CreditCourse {
     private String courseName;
     private String courseNumber;
     private double credits;
@@ -16,20 +16,16 @@ public abstract class Course {
     private static final double MIN_CRED = 0.5;
     private static final double MAX_CRED = 4.0;
     private String ERROR_MSG = "Error: field cannot be null";
-    public Course(){
+    public CreditCourse(String courseName, String courseNumber, double credits){
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
+        this.setCredits(credits);
     }
     
-//     public void setPrerequisites(String prerequisites) {
-//        if(prerequisites == null || prerequisites.length() == 0) {
-//            this.ErrorMsg();
-//            System.exit(0);
-//        } else {
-//            this.prerequisites = prerequisites;
-//        }
-//        
-//    }
+    //all sub-classes must call method (set to "none" if not required)
+//    public abstract void setPrerequisites(String prerequisites);
     
-    public final void setCourseName(String courseName) {
+    private void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             this.ErrorMsg();
             System.exit(0);
@@ -37,7 +33,7 @@ public abstract class Course {
             this.courseName = courseName;
         }
     }
-    public final void setCourseNumber(String courseNumber) {
+    private void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0){
             this.ErrorMsg();
             System.exit(0);
@@ -45,7 +41,7 @@ public abstract class Course {
             this.courseNumber = courseNumber;
         }   
     }
-    public final void setCredits(double credits) {
+    private void setCredits(double credits) {
         if(credits < MIN_CRED || credits > MAX_CRED) {
             this.ErrorMsg();
             System.exit(0);
@@ -63,10 +59,9 @@ public abstract class Course {
     public double getCredits() {
         return credits;
     }
-//    public String getPrerequisites(){
-//        return prerequisites;
-//    }
-    private void ErrorMsg(){
+    
+    //validation message
+    public final void ErrorMsg(){
          System.out.println(ERROR_MSG);
     }
     

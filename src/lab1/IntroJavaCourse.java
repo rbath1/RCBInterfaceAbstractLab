@@ -1,35 +1,29 @@
 package lab1;
 
-import javax.swing.JOptionPane;
-
 /**
- * Describe responsibilities here.
+ * Inherits CreditCourse and set/get prerequisites method
  *
  * @author      Robert Bath
- * @version     1.00
+ * @version     1.1
  */
-public class IntroJavaCourse extends Course {
-//    String courseName;
-//    private String courseNumber;
-//    private double credits;
+public class IntroJavaCourse extends CreditCourse {
     private String prerequisites;
 
-//    public IntroJavaCourse(String courseName, String courseNumber) {
-//        this.courseName = courseName;
-//        this.courseNumber = courseNumber;
-   // }
-
-
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-
-    public void setPrerequisites(String prerequisites){
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
-        }
+    public IntroJavaCourse(String courseName, String courseNumber, double credits,
+            String prerequisites){
+        super(courseName, courseNumber, credits);
+        this.setPrerequisites(prerequisites);
     }
     
+    private void setPrerequisites(String prerequisites){
+        if(prerequisites == null || prerequisites.length() == 0) {
+            super.ErrorMsg();
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    }
+    
+     public String getPrerequisites() {
+        return prerequisites;
+    }
 }

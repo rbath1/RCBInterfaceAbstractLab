@@ -14,6 +14,7 @@ public class StartUp {
          IntroJavaCourse ij = new IntroJavaCourse("Intro to Java", "3333", 4, "Intro To Programming");
          AdvancedJavaCourse aj= new AdvancedJavaCourse("Advanced Java", "4444", 4, "Intro to Java");
          
+         
          System.out.println(ip.getCourseName() + "\n" + ip.getCourseNumber() +"\n" + 
                  ip.getCredits() + "\n");
          System.out.println(ij.getCourseName() + "\n" + ij.getCourseNumber() + "\n" +

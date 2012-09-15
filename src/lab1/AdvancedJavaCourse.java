@@ -12,4 +12,5 @@ public class AdvancedJavaCourse extends IntroJavaCourse{
             String prerequisites) {
        super(courseName, courseNumber, credits, prerequisites);
     }
+    
 }

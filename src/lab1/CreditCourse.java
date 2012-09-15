@@ -60,6 +60,7 @@ public abstract class CreditCourse {
         return credits;
     }
     
+    
     //validation message
     public final void ErrorMsg(){
          System.out.println(ERROR_MSG);

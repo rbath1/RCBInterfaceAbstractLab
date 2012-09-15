@@ -15,6 +15,7 @@ public class IntroJavaCourse extends CreditCourse {
         this.setPrerequisites(prerequisites);
     }
     
+    
     private void setPrerequisites(String prerequisites){
         if(prerequisites == null || prerequisites.length() == 0) {
             super.ErrorMsg();

@@ -1,7 +1,7 @@
 package lab1;
-
 /**
- * Inherits CreditCourse and set/get prerequisites method
+ * Inherits CreditCourse
+ * Class used to inherit set/get prerequisites method
  *
  * @author      Robert Bath
  * @version     1.1
@@ -14,8 +14,6 @@ public class IntroJavaCourse extends CreditCourse {
         super(courseName, courseNumber, credits);
         this.setPrerequisites(prerequisites);
     }
-    
-    
     private void setPrerequisites(String prerequisites){
         if(prerequisites == null || prerequisites.length() == 0) {
             super.ErrorMsg();
@@ -23,7 +21,6 @@ public class IntroJavaCourse extends CreditCourse {
         }
         this.prerequisites = prerequisites;
     }
-    
      public String getPrerequisites() {
         return prerequisites;
     }

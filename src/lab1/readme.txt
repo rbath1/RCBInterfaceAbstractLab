@@ -29,4 +29,13 @@ Instructions for Lab #1:
    is it not possible. Write down your anwer in this document, using the
    white space below:
 
+  Setting the setter methods to final ensures they cannot be overridden and
+  change the function of the method.
+
+//notes!!!! finish this!
+does adding prerequisites' method alter the contract set by super CreditCourse
+violate the LSP, or is extending a prerequisite course off of existing prerequisite
+course valid?
+
+
 

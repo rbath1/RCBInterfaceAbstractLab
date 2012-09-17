@@ -17,7 +17,7 @@ public abstract class CreditCourse {
         this.setCourseNumber(courseNumber);
         this.setCredits(credits);
     }
-    private void setCourseName(String courseName) {
+    public final void setCourseName(String courseName) {
         if(courseName == null || courseName.length() == 0) {
             this.ErrorMsg();
             System.exit(0);
@@ -25,7 +25,7 @@ public abstract class CreditCourse {
             this.courseName = courseName;
         }
     }
-    private void setCourseNumber(String courseNumber) {
+    public final void setCourseNumber(String courseNumber) {
         if(courseNumber == null || courseNumber.length() == 0){
             this.ErrorMsg();
             System.exit(0);
@@ -33,7 +33,8 @@ public abstract class CreditCourse {
             this.courseNumber = courseNumber;
         }   
     }
-    private void setCredits(double credits) {
+    
+    public final void setCredits(double credits) {
         if(credits < MIN_CRED || credits > MAX_CRED) {
             this.ErrorMsg();
             System.exit(0);

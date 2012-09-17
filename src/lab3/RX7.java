@@ -11,6 +11,9 @@ package lab3;
 public class RX7 extends SportsCar implements IForcedInduction{
     private String forcedInduction;
     
+    public RX7(){
+    }
+    
     public RX7(String model, String engineSize, double horsepower,
             double torque, String steering){
         super(model,engineSize,horsepower,torque,steering);
@@ -18,6 +21,7 @@ public class RX7 extends SportsCar implements IForcedInduction{
     
      @Override
     public void setForcedInduction(String forcedInduction){
+         //needs validation
         this.forcedInduction = forcedInduction;
     }
     @Override

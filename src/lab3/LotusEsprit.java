@@ -11,12 +11,16 @@ package lab3;
 public class LotusEsprit extends SportsCar implements IForcedInduction {
     private String forcedInduction;
     
+    public LotusEsprit(){
+        
+    }
     public LotusEsprit(String model, String engineSize, double horsepower,
             double torque, String steering){
         super(model,engineSize,horsepower,torque,steering);
     }
     @Override
     public void setForcedInduction(String forcedInduction){
+        //needs validation
         this.forcedInduction = forcedInduction;
     }
     @Override

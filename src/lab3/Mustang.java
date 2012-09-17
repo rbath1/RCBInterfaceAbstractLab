@@ -10,6 +10,10 @@ package lab3;
  */
 public class Mustang extends SportsCar {
     
+    public Mustang(){
+        
+    }
+    
     public Mustang(String model, String engineSize, double horsepower,
             double torque, String steering){
         super(model,engineSize,horsepower,torque,steering);

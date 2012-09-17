@@ -20,6 +20,10 @@ public abstract class SportsCar {
     private String model;
     private String steering;
     
+    public SportsCar(){
+        
+    }
+    
     public SportsCar(String model, String engineSize, double horsepower, double torque,
             String steering){
         this.model = model;
@@ -29,12 +33,14 @@ public abstract class SportsCar {
         this.steering = steering;
     }
     public final void setModel(String model){
+        //needs validation
         this.model = model;
     }
     public final String getModel(){
         return model;
     }
     public final void setEngineSize(String engineSize){
+        //needs validation
         this.engineSize = engineSize;
     } 
     public final String getEngineSize(){
@@ -42,6 +48,7 @@ public abstract class SportsCar {
     }
     
     public final void setHorsePower(double horsepower){
+        //needs validation
         this.horsepower = horsepower;
     }
     
@@ -50,6 +57,7 @@ public abstract class SportsCar {
     }
     
     public final void setTorque(double torque){
+        //needs validation
         this.torque = torque;
     }
     
@@ -58,6 +66,7 @@ public abstract class SportsCar {
     }
  
     public final void setSteering(String steering){
+        //needs validation
         this.steering = steering;
     }
     

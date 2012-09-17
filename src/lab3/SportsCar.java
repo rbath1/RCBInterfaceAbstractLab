@@ -20,6 +20,14 @@ public abstract class SportsCar {
     private String model;
     private String steering;
     
+    public SportsCar(String model, String engineSize, double horsepower, double torque,
+            String steering){
+        this.model = model;
+        this.engineSize = engineSize;
+        this.horsepower = horsepower;
+        this.torque = torque;
+        this.steering = steering;
+    }
     public final void setModel(String model){
         this.model = model;
     }

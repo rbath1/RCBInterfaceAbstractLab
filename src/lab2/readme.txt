@@ -24,5 +24,6 @@ Instructions for Lab #2:
    is it not possible. Write down your anwer in this document, using the
    white space below:
 
-    public
+    final declaration prevent methods to be changed and only can be used
+    as intended.
 

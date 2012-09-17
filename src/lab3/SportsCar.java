@@ -19,6 +19,7 @@ public abstract class SportsCar {
     private double torque;
     private String model;
     private String steering;
+    IAspiration aspiration;
     
     public SportsCar(){
         
@@ -31,6 +32,10 @@ public abstract class SportsCar {
         this.horsepower = horsepower;
         this.torque = torque;
         this.steering = steering;
+    }
+    
+    public void displayAspiration(){
+        aspiration.aspiration();
     }
     public final void setModel(String model){
         //needs validation
@@ -72,5 +77,8 @@ public abstract class SportsCar {
     
     public final String getSteering(){
         return steering;
+    }
+    public void displayAspiration(IAspiration asp){
+        aspiration = asp;
     }
 }
